@@ -4,7 +4,7 @@ const mongoose = require('mongoose');
 * Define the schema of the "movie resource" to be stored in the db
 */
 
-const movieSchema = mongoose.model({
+const movieSchema = mongoose.Schema({
     name: {
         type: String,
         required: true
@@ -16,7 +16,8 @@ const movieSchema = mongoose.model({
     casts: {
         type: [String],
         required: true
-    }, trailerUrl: {
+    }, 
+    trailerUrl: {
         type: String,
         required: true
     }, 

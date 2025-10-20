@@ -17,6 +17,16 @@ app.get('/home', (req, res) => {
     });
 });
 
+// list the routes
+const MovieRoutes = require('./routes/movie.routes');
+
+
+// call the routes
+MovieRoutes(app);
+
+
+
+
 app.listen(process.env.PORT, async () => {
     console.log(`Server is running on the port ${process.env.PORT}`);
     
