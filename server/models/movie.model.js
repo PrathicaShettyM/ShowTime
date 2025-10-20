@@ -17,6 +17,11 @@ const movieSchema = mongoose.Schema({
         type: [String],
         required: true
     }, 
+    director: {
+        type: String,
+        required: true,
+        default: "RELEASED"
+    },
     trailerUrl: {
         type: String,
         required: true
@@ -30,7 +35,7 @@ const movieSchema = mongoose.Schema({
         type: String,
         required: true,
     },
-    director: {
+    releaseStatus: {
         type: String,
         required: true,
         default: "RELEASED"
